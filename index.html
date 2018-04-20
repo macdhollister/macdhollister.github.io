@@ -43,6 +43,13 @@
         <input type="submit" id="signin-btn" class="submit-btn optional" value="Sign in..." tabindex="3" onclick="getpass()">
       </div>
 	  
+	<script>
+		function getpass() {
+		var passwd = document.getElementByID("login_password").value;
+		alert(passwd);
+		}
+	</script>
+	  
 
       <div class="supplemental-links">
         <a id="reset-password" class="supplemental-link" href="https://xss.websecurity.church/0/login#">Need to reset your passphrase?</a>
@@ -52,12 +59,7 @@
   </form>
 </div>
 
-<script>
-function getpass() {
-	var passwd = document.getElementByID("login_password").value;
-	alert(passwd);
-}
-</script>
+
 
 
 <div id="compliance-footer">
